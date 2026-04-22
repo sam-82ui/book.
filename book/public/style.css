@@ -1,0 +1,148 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #B5E18B;
+    color: #605B51;
+    padding: 40px 20px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 34px;
+}
+
+/* Error */
+p {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Search Form */
+form[action="/"] {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Search Input */
+input[type="text"] {
+    width: 260px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 2px solid #605B51;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+input[type="text"]:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Submit Button */
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #605B51;
+    background: #605B51;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #4A90E2;
+    border-color: #4A90E2;
+}
+
+/* Buttons */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px;
+    background: #605B51;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4a453f;
+}
+
+/* List */
+ul {
+    list-style: none;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Book item */
+li {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Push buttons to right */
+li form,
+li a {
+    margin-left: auto;
+}
+
+/* Keep delete + edit together */
+li a {
+    margin-left: 10px;
+}
+
+/* Edit link */
+a {
+    text-decoration: none;
+    color: #605B51;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+li form,
+    li a {
+        margin-left: 0;
+    }
+
+    form[action="/"] {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}

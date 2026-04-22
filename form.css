@@ -1,0 +1,86 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+/* Body */
+body {
+background: #B5E18B;
+color: #605B51;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+/* Container Form */
+form {
+background: #ffffff;
+padding: 30px 25px;
+border-radius: 15px;
+width: 320px;
+box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Title */
+h1 {
+position: absolute;
+top: 40px;
+text-align: center;
+width: 100%;
+font-size: 28px;
+}
+
+/* Error */
+p {
+position: absolute;
+top: 10px;
+text-align: center;
+width: 100%;
+font-weight: bold;
+}
+
+/* Labels */
+label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+/* Inputs */
+input {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border-radius: 8px;
+border: 2px solid #605B51;
+outline: none;
+transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus {
+border-color: #4a453f;
+}
+
+/* Button */
+button {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 25px;
+background: #605B51;
+color: #fff;
+font-size: 15px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* Hover */
+button:hover {
+background: #4a453f;
+}

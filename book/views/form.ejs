@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= Book ? 'Edit' : 'Add' %> Book</title>
+  <link rel="stylesheet" href="/form.css">
+</head>
+
+<body>
+
+<p style="color: red;"><%= error ? error : '' %></p>
+
+<h1><%= Book ? 'Edit' : 'Add' %> Book</h1>
+
+<form action="<%= Book ? '/books/' + Book.id + '?_method=PUT' : '/books' %>" method="POST">
+
+  <label>Title:</label>
+  <input 
+    type="text" 
+    name="title" 
+    value="<%= Book ? Book.title : '' %>" 
+    required
+  />
+  <br>
+
+  <label>Author:</label>
+  <input 
+    type="text" 
+    name="author" 
+    value="<%= Book ? Book.author : '' %>" 
+    required
+  />
+  <br>
+
+  <button type="submit">
+    <%= Book ? 'Update' : 'Add' %>
+  </button>
+
+</form>
+
+</body>
+</html>

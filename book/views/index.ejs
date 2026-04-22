@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+<% } %>
+
+<h1>Home Page</h1>
+
+<form action="/" method="GET">
+    <input type="text" name="searchQuery" placeholder="search your book"
+        value="<%= searchQuery %>" />
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+<% filterBooks.forEach(book => { %>
+    <li>
+        <%= book.title %> - <%= book.author %>
+
+        <!-- DELETE -->
+        <form action="/books/<%= book.id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+
+        <!-- EDIT -->
+        <a href="/books/<%= book.id %>/edit">Edit</a>
+    </li>
+<% }) %>
+</ul>
+  <script src="app.js"></script>
+</body>
+</html>
