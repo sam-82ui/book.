@@ -121,6 +121,6 @@ app.put("/books/:id", (req, res) => {
     }
 });
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running at http://${HOST}:${PORT}`);
 });
