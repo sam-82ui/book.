@@ -9,7 +9,7 @@ const app = express();
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || "localhost";
+const HOST = process.env.HOST || "0.0.0.0";
 
 app.use(methodoverride("_method"));
 
@@ -121,6 +121,6 @@ app.put("/books/:id", (req, res) => {
     }
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, HOST, () => {
     console.log(`Server is running at http://${HOST}:${PORT}`);
 });
